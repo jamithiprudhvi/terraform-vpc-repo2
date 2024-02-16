@@ -41,7 +41,7 @@ variable "public_subnets_cidr" {
     type = list 
     validation {
         error_message = "please give 2 public valid subnet cidr"
-        condition = length(var.public_subnet_cidr) == 2
+        condition = length(var.public_subnets_cidr) == 2
     }
   
 }
@@ -55,7 +55,7 @@ variable "private_subnets_cidr" {
     type = list 
     validation {
         error_message = "please give 2 private valid subnet cidr"
-        condition = length(var.private_subnet_cidr) == 2
+        condition = length(var.private_subnets_cidr) == 2
     }
   
 }
@@ -69,7 +69,7 @@ variable "database_subnets_cidr" {
     type = list 
     validation {
         error_message = "please give 2 private valid subnet cidr"
-        condition = length(var.database_subnet_cidr) == 2
+        condition = length(var.database_subnets_cidr) == 2
     }
   
 }
